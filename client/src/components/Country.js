@@ -1,18 +1,13 @@
-// function Country(name){
+import React, {useState} from 'react';
+  
+const Country = ({ input }) => {
+    return (
+<p>
+        {input}
+</p>
 
-//     DemographicInfo
-//     {
-//         PovertyRates:{
-//             GDP: 1000,
-//             WealthDistribution:"null",
-//             Description: "null",
-//         }
-//             FakeNewsLaws: "null",
-//         InformationSources: {
-//             InternetAccess: "null",
-//             TVNewsOrganizations : [],
-//         }
-//                     Population: 1000
+    )
+    
+}
 
-//                         }
-// }
+export default Country;
