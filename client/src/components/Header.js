@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Header({searchTerm}) {
+export default function Header({input}) {
   const classes = useStyles();
   const [query, setQuery] = useState('');
   const [searchVal, setSearchVal] = useState("")
@@ -79,7 +79,6 @@ export default function Header({searchTerm}) {
     console.log("submitting from searchCountries");
       console.log(e.target.value);
   }
-
 
   return (
     <div className={classes.root}>
@@ -109,7 +108,7 @@ export default function Header({searchTerm}) {
             setShowVal(true)  
             // alert(searchVal)
             //   setQuery(searchVal)
-            searchTerm(searchVal)
+            //searchTerm();
           }}>
           <SearchIcon />
         </IconButton>

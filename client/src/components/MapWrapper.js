@@ -5,16 +5,20 @@ import Header from "./Header";
 import Country from "./Country"
 
 const MapWrapper = () => {
-    const [content, setContent] = useState("")
-    const [userSearchCountry, setUserSearchCountry] = useState("");
+  
+    const [content, setContent] = useState("");
+    const [userSearchCountry, setUserSearchCountry] = useState('');
 
     console.log("map wrapper called");
     
+    
+
+
     return(
         <div>
-      <Header searchTerm = {setUserSearchCountry}/>
-      <Country input = {userSearchCountry}/>
-      <Map setTooltipContent={setContent}/>
+      <Header input={content} />
+      <Country input = {content}/>
+      <Map setTooltipContent={setContent} setUserSearchCountry={setUserSearchCountry}/>
       <ReactTooltip>{content}</ReactTooltip>
 
       

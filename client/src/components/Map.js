@@ -10,7 +10,8 @@ import {
   const geoUrl =
     "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json"
   
-  const Map = ({ setTooltipContent }) => {
+  const Map = ({ setTooltipContent }, {setUserSearchCountry}) => {
+    
     return (
       <div style={{margin:"auto", width:"90%", marginTop: "-18vh", position:"absolute"}}>
         <ComposableMap
@@ -31,6 +32,10 @@ import {
               }}
               onMouseLeave={() => {
                 setTooltipContent("");
+              }}
+              onClick={() => {
+                const { NAME } = geo.properties;
+               setUserSearchCountry(`${NAME}`);
               }}
               style={{
                 default: {
